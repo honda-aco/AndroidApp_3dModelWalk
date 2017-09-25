@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="service_name">.service.ServiceHaconiwa</string>
+    <string name="value0001">左上</string>
+    <string name="value0002">右上</string>
+    <string name="value0003">左下</string>
+    <string name="value0004">右下</string>
+    <string name="value0005">1/?</string>
+    <string name="value0006">トークモード</string>
+    <string name="value0007">サイズ</string>
+    <string name="value0008">開始位置</string>
+    <string name="value0009">省エネモード</string>
+    <string name="value0010">おいで</string>
+    <string name="value0011">またね</string>
+    <string name="value0012">支度中……</string>
+    <string name="value0013">Cancel</string>
+    <string name="value0014">アプリを見て待つ</string>
+    <string name="value0015">透明度</string>
+    <string name="value0016">左</string>
+    <string name="value0017">中央</string>
+    <string name="value0018">右</string>
+    <string name="value0019">参照</string>
+    <string name="value0020">OBJファイル</string>
+    <string name="value0021">PNGファイル</string>
+    <string name="value0022">自作モデルを登録する</string>
+    <string name="value0023">ファイルの追加</string>
+    <string name="value0024">保存</string>
+    <string name="value0025">削除</string>
+    <string name="value0026">Objファイルの選択</string>
+    <string name="value0027">Pngファイルの選択 </string>
+    <string name="value0028">".obj"形式のファイルを選択してください</string>
+    <string name="value0029">".png"形式のファイルを選択してください</string>
+    <string name="value0030">座標範囲</string>
+    <string name="value0031">描画間隔</string>
+    <string name="value0032">秒</string>
+    <string name="value0033">\?用ファイルを保存しました。</string>
+    <string name="value0034">ヘルプ</string>
+    <string name="value0035">＜自作モデル登録の使い方＞</string>
+    <string name="value0036">「自作モデル登録」ボタンからOBJモデルを登録します。</string>
+    <string name="value0037">モデルは3種類のポーズを用意し、左、中央、右にそれぞれ登録してください。</string>
+    <string name="value0038">下のように、左→（描画間隔）→中央→（描画間隔）→右→（描画間隔）→中央→（描画間隔）→左→……の順に繰返し表示されます。</string>
+    <string name="value0039">＜OBJファイルの条件＞</string>
+    <string name="value0040">OBJファイルには以下の情報を付与してください。</string>
+    <string name="value0041">・Normals</string>
+    <string name="value0042">・UVs</string>
+    <string name="value0043">・Triangulate Faces</string>
+    <string name="value0044">例）Blenderでの出力</string>
+    <string name="value0045">＜座標範囲について＞</string>
+    <string name="value0046">モデルリスト</string>
+    <string name="value0047">自作モデル登録</string>
+    <string name="service_intent_action">serviceHaconiwaIntent</string>
+    <string name="service_intent1">charaNo</string>
+    <string name="service_intent2">saveEnergy</string>
+    <string name="service_intent3">talkAction</string>
+    <string name="service_intent4">talkLanguage</string>
+    <string name="service_intent5">coordinateRange</string>
+    <string name="service_intent6">interval</string>
+    <string name="service_intent7">size</string>
+    <string name="service_intent8">doorPosition</string>
+    <string name="service_intent9">transparency</string>
+    <string name="activity_intent_action">menuActivityIntent</string>
+    <string name="activity_intent1">method</string>
+    <string name="activity_intent2">value</string>
+    <string name="convert_directory">/data/data/com.ns.aco.sp/?/?</string>
+    <string name="convert_vertex_file">v_?.txt</string>
+    <string name="convert_normal_file">vn_?.txt</string>
+    <string name="convert_texture_file">vt_?.txt</string>
+    <string name="convert_png_file">p_?.png</string>
+    <string name="app_name">hacoNiWA</string>
+    <string name="notification_title">hacoNiWA</string>
+    <string name="notification_message">walk</string>
+    <string name="db_name">hacoNiWaDB</string>
+    <string name="db_version">1</string>
+    <string name="charaId_droid">00001</string>
+    <string name="charaId_onepiece">00002</string>
+    <string name="charaId_waso">00003</string>
+    <string name="charaId_cardigan">00004</string>
+    <string name="charaId_frog">00005</string>
+    <string name="charaId_frogRain">00006</string>
+    <string name="charaId_jersey">00007</string>
+    <string name="charaId_witch">00008</string>
+    <string name="charaId_original">00009</string>
+    <string name="charaId_unity">00010</string>
+    <string name="charaName_droid">ドロイド君</string>
+    <string name="charaName_yucco">ゆっこ</string>
+    <string name="charaName_frog">かえる殿下</string>
+    <string name="charaName_original1">オリジナル1</string>
+    <string name="charaName_unity">Unity</string>
+    <string name="talkId_droid">T00001</string>
+    <string name="talkId_yucco">T00002</string>
+    <string name="talkId_frog">T00005</string>
+    <string name="talkId_original1">TO0001</string>
+    <string name="talkId_unity">T00010</string>
+    <string name="notify_id">00000001</string>
+    <string name="notify_chkText">非表示</string>
+
+    <string-array name="spinner_size">
+        <item>1/3</item>
+        <item>1/4</item>
+        <item>1/5</item>
+        <item>1/6</item>
+        <item>1/7</item>
+        <item>1/8</item>
+        <item>1/9</item>
+        <item>1/10</item>
+        <item>1/11</item>
+        <item>1/12</item>
+        <item>1/13</item>
+        <item>1/14</item>
+        <item>1/15</item>
+        <item>1/16</item>
+        <item>1/17</item>
+        <item>1/18</item>
+        <item>1/19</item>
+        <item>1/20</item>
+    </string-array>
+
+    <string-array name="spinner_position">
+        <item>a</item>
+        <item>@string/value0002</item>
+        <item>@string/value0003</item>
+        <item>@string/value0004</item>
+    </string-array>
+</resources>

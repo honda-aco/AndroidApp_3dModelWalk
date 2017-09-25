@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="image_button_style">
+        <item name="android:background">#00000000</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <!-- 枠線 -->
+        <item name="colorControlNormal">#FFFFFF</item>
+        <!-- チェック時の色 -->
+        <item name="colorControlActivated">#FFFFFF</item>
+    </style>
+    
+</resources>

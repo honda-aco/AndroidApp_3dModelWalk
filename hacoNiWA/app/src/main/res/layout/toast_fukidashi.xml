@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFEEE3"
+    android:orientation="horizontal" >
+
+    <TextView
+	    android:id="@+id/FukidashiLeft"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="　"
+	    android:textColor="#000000" 
+	    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+	<TextView
+	    android:id="@+id/FukidashiCenter"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:text="TEST"
+	    android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/FukidashiRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="　"
+        android:textColor="#000000"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+</LinearLayout>

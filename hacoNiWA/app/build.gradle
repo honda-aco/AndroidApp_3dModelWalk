@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        applicationId "com.ns.aco.sp"
+        minSdkVersion 14
+        targetSdkVersion 24
+        multiDexEnabled true
+
+        if (project.hasProperty('banner_ad_unit_id_test')) {
+            buildConfigField 'String', 'banner_ad_unit_id_test', project.banner_ad_unit_id_test
+        }
+
+        if (project.hasProperty('banner_ad_unit_id_home')) {
+            buildConfigField 'String', 'banner_ad_unit_id_home', project.banner_ad_unit_id_home
+        }
+
+        if (project.hasProperty('banner_ad_unit_id_dialog')) {
+            buildConfigField 'String', 'banner_ad_unit_id_dialog', project.banner_ad_unit_id_dialog
+        }
+
+        if (project.hasProperty('asta_icon_ad_id')) {
+            buildConfigField 'String', 'asta_icon_ad_id', project.asta_icon_ad_id
+        }
+
+        if (project.hasProperty('asta_wall_ad_id')) {
+            buildConfigField 'String', 'asta_wall_ad_id', project.asta_wall_ad_id
+        }
+
+//        ndk {
+//            abiFilters "armeabi-v7a"
+//        }
+
+//        externalNativeBuild {
+//            cmake {
+////                cppFlags "-frtti -fexceptions"
+//                abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64'
+//            }
+//        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+
+    productFlavors {
+    }
+
+    externalNativeBuild {
+        cmake {
+            // Provides a relative path to your CMake build script.
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    compile 'com.google.android.gms:play-services:+'
+    compile files('libs/jp.maru.mrd-2.0.0.jar')
+    compile files('libs/MrdAstaWall-1.1.2.jar')
+    compile project(':common')
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="jp.co.dac.smarti.android">
+        <attr name="ADSERVER" format="string" />
+        <attr name="SITE" format="string" />
+        <attr name="AREA" format="string" />
+        <attr name="AAMSZ" format="string" />
+        <attr name="CPC" format="boolean" />
+        <attr name="ADDEDPARAMS" format="string" />
+        <attr name="ROTATION_NUM" format="integer" />
+        <attr name="ROTATION_INTERVAL" format="integer" />
+    </declare-styleable>
+	<declare-styleable name="mediba.ad.sdk.android.MasAdView">
+		<attr name="backgroundColor" format="integer" />
+		<attr name="requestInterval" format="integer" />
+		<attr name="refreshAnimation" format="integer" />
+		<attr name="visibility" format="integer" />
+		<attr name="testMode" format="boolean" />
+	</declare-styleable>
+</resources>
