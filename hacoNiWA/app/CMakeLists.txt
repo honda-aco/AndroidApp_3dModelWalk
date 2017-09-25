@@ -87,4 +87,4 @@ set_target_properties( # Specifies the target library.
 
                        # Provides the path to the library you want to import.
                        # src/main/lib
-                       .externalNativeBuild/cmake/debug/obj/${ANDROID_ABI}/libNativeOpenGL.so)
+                       libsNative/${ANDROID_ABI}/libNativeOpenGL.so)
