@@ -44,7 +44,13 @@ captures/
 *.jks
 
 # External native build folder generated in Android Studio 2.2 and later
-.externalNativeBuild
+app/.externalNativeBuild/cmake/debug/*
+app/.externalNativeBuild/cmake/release/*
+!app/.externalNativeBuild/cmake/debug/obj
+!app/.externalNativeBuild/cmake/release/obj
+
+# NativeCode
+app/src/main/cpp/
 
 # Google Services (e.g. APIs or Firebase)
 google-services.json
@@ -53,6 +59,3 @@ google-services.json
 freeline.py
 freeline/
 freeline_project_description.json
-
-# NativeCode
-app/src/main/cpp/

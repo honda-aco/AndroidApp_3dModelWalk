@@ -21,7 +21,7 @@ cmake_minimum_required(VERSION 3.4.1)
 # automatically packages shared libraries with your APK.
 
 ## 自作のソースファイルを指定
-##add_library( # Specifies the name of the library.
+#add_library( # Specifies the name of the library.
 #             NativeOpenGL
 #
 #             # Sets the library as a shared library.
@@ -87,4 +87,4 @@ set_target_properties( # Specifies the target library.
 
                        # Provides the path to the library you want to import.
                        # src/main/lib
-                       libsNative/${ANDROID_ABI}/libNativeOpenGL.so)
+                       .externalNativeBuild/cmake/release/obj/${ANDROID_ABI}/libNativeOpenGL.so)
