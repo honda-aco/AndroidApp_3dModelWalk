@@ -8,6 +8,8 @@ android {
         applicationId "com.ns.aco.sp"
         minSdkVersion 14
         targetSdkVersion 24
+        versionCode 16
+        versionName "2.5"
         multiDexEnabled true
 
         if (project.hasProperty('banner_ad_unit_id_test')) {
