@@ -335,7 +335,7 @@ public class ServiceHaconiwa extends Service implements ServiceContract.Service{
 	}
 
 	@Override
-	public void setMaxValueProgressDialog(int value) {
+	public void setMaxValue_progressDialog(int value) {
 		if (_serviceStop == false) {
 			Intent intent = new Intent();
 			intent.putExtra(getString(R.string.activity_intent1), 0);
@@ -346,7 +346,7 @@ public class ServiceHaconiwa extends Service implements ServiceContract.Service{
 	}
 
 	@Override
-	public void incrementProgressDialog(int value) {
+	public void increment_progressDialog(int value) {
 		if (_serviceStop == false) {
 			Intent intent = new Intent();
 			intent.putExtra(getString(R.string.activity_intent1), 1);
@@ -357,7 +357,7 @@ public class ServiceHaconiwa extends Service implements ServiceContract.Service{
 	}
 
 	@Override
-	public void closeProgressDialog() {
+	public void close_progressDialog() {
 		if (_serviceStop == false) {
 			Intent intent = new Intent();
 			intent.putExtra(getString(R.string.activity_intent1), 2);

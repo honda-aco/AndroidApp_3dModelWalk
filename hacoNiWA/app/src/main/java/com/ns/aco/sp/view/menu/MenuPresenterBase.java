@@ -68,14 +68,14 @@ public abstract class MenuPresenterBase implements MenuContract.Presenter, Dialo
     }
 
     @Override
-    public void progressChangedTransparency(SeekBar seekBar, TextView textView){
+    public void progressChanged_transparency(SeekBar seekBar, TextView textView){
         int progressValue = seekBar.getProgress();
         textView.setText(String.valueOf(1000 + progressValue).substring(1, 4));
         _view.sendBroadcast_transparency();
     }
 
     @Override
-    public void checkSavingEnergy(CheckBox checkBox){
+    public void check_savingEnergy(CheckBox checkBox){
         _dataAccess.set_SAVINGENERGY(checkBox.isChecked());
     }
 

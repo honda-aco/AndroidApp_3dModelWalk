@@ -79,7 +79,7 @@ public interface MenuContract {
          * Fragmentの取得
          * @return
          */
-        Fragment get_fragment();
+        Fragment getFragment();
 
         /**
          * サービスの起動状態確認
@@ -116,6 +116,18 @@ public interface MenuContract {
         void setPresenter(Presenter_Fragment2 presenter);
 
         /**
+         * 座標範囲設定テキストのテキスト設定
+         * @param value
+         */
+        void setText_rangeEdit(float value);
+
+        /**
+         * 表示間隔設定テキストのテキスト設定
+         * @param value
+         */
+        void setText_intervalEdit(float value);
+
+        /**
          * アクティビティの起動
          * @param aClass
          */
@@ -127,18 +139,18 @@ public interface MenuContract {
          * カスタム進行状況ダイアログに最大値を設定
          * @param value
          */
-        void setMaxValueProgressDialog(final int value);
+        void setMaxValue_progressDialog(final int value);
 
         /**
          * カスタム進行状況ダイアログの進行状況に引数値を加算
          * @param value
          */
-        void incrementProgressDialog(final int value);
+        void increment_progressDialog(final int value);
 
         /**
          * 進行状況ダイアログの終了
          */
-        void closeProgressDialog();
+        void close_progressDialog();
     }
 
     interface Presenter extends com.ns.aco.sp.Presenter {
@@ -153,13 +165,13 @@ public interface MenuContract {
          * @param seekBar
          * @param textView
          */
-        void progressChangedTransparency(SeekBar seekBar, TextView textView);
+        void progressChanged_transparency(SeekBar seekBar, TextView textView);
 
         /**
          * 省エネモードのチェック変更
          * @param checkBox
          */
-        void checkSavingEnergy(CheckBox checkBox);
+        void check_savingEnergy(CheckBox checkBox);
 
         /**
          * サイズ＆ポジション設定ダイアログの表示
@@ -203,7 +215,7 @@ public interface MenuContract {
          * トークモードのチェック変更
          * @param checkBox
          */
-        void checkTalkAction(CheckBox checkBox);
+        void check_talkAction(CheckBox checkBox);
 
         /**
          * ImageView選択
@@ -229,7 +241,14 @@ public interface MenuContract {
          * @param editText
          * @param b
          */
-        void onFocusChange(EditText editText, boolean b);
+        void onFocusChange_rangeEdit(EditText editText, boolean b);
+
+        /**
+         * EditTextのフォーカス変更イベント
+         * @param editText
+         * @param b
+         */
+        void onFocusChange_intervalEdit(EditText editText, boolean b);
 
         /**
          * アクティビティの起動

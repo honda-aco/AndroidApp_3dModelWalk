@@ -125,7 +125,7 @@ public class MyRenderer implements GLSurfaceView.Renderer {
 		// OpenGLのピクセルデータからビットマップを生成
 		RendererInfo rendererInfo = rendererMain();
 		// プログレスバーを消去
-		_service.closeProgressDialog();
+		_service.close_progressDialog();
 		// WindowManagerからViewを削除
 		_service.removeView_gLSurfaceView();
 		_service.removeView_imageFrontDoor();

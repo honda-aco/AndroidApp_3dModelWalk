@@ -98,7 +98,7 @@ public class MenuFragment1 extends MenuFragmentBase implements MenuContract.View
         _seekBarTransparency.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                _presenter.progressChangedTransparency(seekBar, _textSeekProgress);
+                _presenter.progressChanged_transparency(seekBar, _textSeekProgress);
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -114,7 +114,7 @@ public class MenuFragment1 extends MenuFragmentBase implements MenuContract.View
             @Override
             public void onClick(View v) {
                 v.requestFocusFromTouch();
-                _presenter.checkSavingEnergy((CheckBox) v);
+                _presenter.check_savingEnergy((CheckBox) v);
             }
         });
 
@@ -124,7 +124,7 @@ public class MenuFragment1 extends MenuFragmentBase implements MenuContract.View
             @Override
             public void onClick(View v) {
                 v.requestFocusFromTouch();
-                _presenter.checkTalkAction((CheckBox) v);
+                _presenter.check_talkAction((CheckBox) v);
             }
         });
 

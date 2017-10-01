@@ -111,13 +111,13 @@ public interface DataAccessContract {
      * 座標範囲を取得
      * @return
      */
-    boolean set_COORDINATE_RANGE(int value);
+    boolean set_COORDINATE_RANGE(float value);
 
     /**
      * モデルの表示切替時間間隔を取得
      * @return
      */
-    boolean set_INTERVAL(int value);
+    boolean set_INTERVAL(float value);
 
     /**
      * キャラクタの呼出し回数の更新

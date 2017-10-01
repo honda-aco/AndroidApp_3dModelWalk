@@ -15,13 +15,34 @@ public class MenuPresenter2 extends MenuPresenterBase implements MenuContract.Pr
     }
 
     @Override
-    public void onFocusChange(EditText view, boolean b) {
+    public void initializeComponents(){
+        super.initializeComponents();
+
+        _viewFragment2.setText_rangeEdit(_dataAccess.get_COORDINATE_RANGE());
+        _viewFragment2.setText_intervalEdit(_dataAccess.get_INTERVAL());
+    }
+
+    @Override
+    public void onFocusChange_rangeEdit(EditText view, boolean b) {
+        String value = onFocusChange(view);
+        _dataAccess.set_COORDINATE_RANGE(Float.valueOf(value));
+        view.setText(value);
+    }
+
+    @Override
+    public void onFocusChange_intervalEdit(EditText view, boolean b) {
+        String value = onFocusChange(view);
+        _dataAccess.set_INTERVAL(Float.valueOf(value));
+        view.setText(value);
+    }
+
+    private String onFocusChange(EditText view) {
         // 0.0の場合は0.1にする
         float value = Float.valueOf(view.getText().toString());
         if(value == 0){
             value = 0.1f;
         }
-        view.setText(String.valueOf(value));
+        return String.valueOf(value);
     }
 
     @Override

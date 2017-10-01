@@ -174,13 +174,13 @@ public class OperateDataBase implements DataAccessContract{
 	}
 
 	@Override
-	public boolean set_COORDINATE_RANGE(int value) {
+	public boolean set_COORDINATE_RANGE(float value) {
 		return _dbAdapter.ExecuteSql(
 				"UPDATE SETTING_REAL SET VALUE = ? WHERE ID = 'COORDINATE_RANGE'", new Object[]{value});
 	}
 
 	@Override
-	public boolean set_INTERVAL(int value) {
+	public boolean set_INTERVAL(float value) {
 		return _dbAdapter.ExecuteSql(
 				"UPDATE SETTING_REAL SET VALUE = ? WHERE ID = 'INTERVAL'", new Object[]{value});
 	}

@@ -23,7 +23,7 @@ public class MenuPresenter1 extends MenuPresenterBase implements MenuContract.Pr
     }
 
     @Override
-    public void checkTalkAction(CheckBox checkBox){
+    public void check_talkAction(CheckBox checkBox){
         _dataAccess.set_TALKACTION(checkBox.isChecked());
     }
 

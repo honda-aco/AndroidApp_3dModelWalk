@@ -19,7 +19,6 @@ import com.ns.aco.sp.dialog.DialogContract;
 import com.ns.aco.sp.dialog.ProgressDialog;
 import com.ns.aco.sp.dialog.SizePositionDialog;
 import com.ns.aco.sp.extent.MyFragmentPagerAdapter;
-import java.util.Locale;
 
 public class ActivityMenu extends AppCompatActivity{
 
@@ -63,14 +62,18 @@ public class ActivityMenu extends AppCompatActivity{
 
 		// ViewPagerの中身を設定
 		String[] pageTitleList = new String[]{getString(R.string.value0046), getString(R.string.value0047)};
-		Fragment[] pageFragmentList = new Fragment[]{_viewFragment1.get_fragment(), _viewFragment2.get_fragment()};
+		Fragment[] pageFragmentList = new Fragment[]{_viewFragment1.getFragment(), _viewFragment2.getFragment()};
 		MyFragmentPagerAdapter myFragmentPagerAdapter =
 				new MyFragmentPagerAdapter(getSupportFragmentManager(), pageFragmentList, pageTitleList);
 
+		viewPager.setOffscreenPageLimit(1);
 		viewPager.setAdapter(myFragmentPagerAdapter);
 		tabLayout.setupWithViewPager(viewPager);
 
 		viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+			@Override
+			public void onPageScrollStateChanged(int state) {}
+
 			@Override
 			public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
 
@@ -78,9 +81,6 @@ public class ActivityMenu extends AppCompatActivity{
 			public void onPageSelected(int position) {
 				_pageNo = position;
 			}
-
-			@Override
-			public void onPageScrollStateChanged(int state) {}
 		});
 
 //		// 言語設定により表示する広告を切り替える
@@ -118,13 +118,13 @@ public class ActivityMenu extends AppCompatActivity{
 
 				switch (intent.getIntExtra(getString(R.string.activity_intent1), -1) ){
 					case 0:
-						handler.setMaxValueProgressDialog(intent.getIntExtra(getString(R.string.activity_intent2), 0));
+						handler.setMaxValue_progressDialog(intent.getIntExtra(getString(R.string.activity_intent2), 0));
 						break;
 					case 1:
-						handler.incrementProgressDialog(intent.getIntExtra(getString(R.string.activity_intent2), 0));
+						handler.increment_progressDialog(intent.getIntExtra(getString(R.string.activity_intent2), 0));
 						break;
 					case 2:
-						handler.closeProgressDialog();
+						handler.close_progressDialog();
 						break;
 				}
 			}

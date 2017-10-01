@@ -243,7 +243,7 @@ public class RendererInfoJersey extends RendererInfoBase {
 		// テクスチャおよびモデルデータを読込む
 		if (init){
 			// プログレスバーの最大値を設定
-			_service.setMaxValueProgressDialog(getDrawBitmapCount());
+			_service.setMaxValue_progressDialog(getDrawBitmapCount());
 			loadRendererModel();
 		}
 		// レンダリングを実施しキャッシュに登録する
@@ -280,7 +280,7 @@ public class RendererInfoJersey extends RendererInfoBase {
 				return false;
 			}else{
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 		}
 
@@ -304,7 +304,7 @@ public class RendererInfoJersey extends RendererInfoBase {
 				}
 				initPixels = false;
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 			// モデルの回転を終了する
 			_gl11.glRotatef(-forwardDirection[i], 0, 1, 0);

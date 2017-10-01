@@ -52,6 +52,7 @@ public class ActivitySetModel extends AppCompatActivity {
 		Fragment[] pageFragmentList = new Fragment[]{setModelView1.get_fragment(), setModelView2.get_fragment(), setModelView3.get_fragment()};
 		MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), pageFragmentList, pageTitleList);
 
+		viewPager.setOffscreenPageLimit(2);
 		viewPager.setAdapter(myFragmentPagerAdapter);
 		tabLayout.setupWithViewPager(viewPager);
 	}

@@ -15,7 +15,7 @@ public class MenuHandler extends Thread implements MenuContract.Handler{
 	}
 
 	@Override
-	public void setMaxValueProgressDialog(final int value) {
+	public void setMaxValue_progressDialog(final int value) {
 		new Handler(threadUI).post(new Runnable() {
 			public void run() {
 				_progressDialog.setMax(value);
@@ -25,7 +25,7 @@ public class MenuHandler extends Thread implements MenuContract.Handler{
 	}
 
 	@Override
-	public void incrementProgressDialog(final int value) {
+	public void increment_progressDialog(final int value) {
 		new Handler(threadUI).post(new Runnable() {
 			public void run() {
 				_progressDialog.incrementProgressBy(value);
@@ -34,7 +34,7 @@ public class MenuHandler extends Thread implements MenuContract.Handler{
 	}
 
 	@Override
-	public void closeProgressDialog() {
+	public void close_progressDialog() {
 		new Handler(threadUI).post(new Runnable() {
 			public void run() {
 				_progressDialog.dismiss();

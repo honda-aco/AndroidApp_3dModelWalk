@@ -274,7 +274,7 @@ public class RendererInfoCardiganPose extends RendererInfoCardigan {
 		// テクスチャおよびモデルデータを読込む
 		if (init){
 			// プログレスバーの最大値を設定
-			_service.setMaxValueProgressDialog(getDrawBitmapCount());
+			_service.setMaxValue_progressDialog(getDrawBitmapCount());
 			loadRendererModel();
 		}
 		boolean success = createBitmapList(init, pixelWidth, pixelHeight);
@@ -296,7 +296,7 @@ public class RendererInfoCardiganPose extends RendererInfoCardigan {
 				return false;
 			}else{
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 		}
 
@@ -308,7 +308,7 @@ public class RendererInfoCardiganPose extends RendererInfoCardigan {
 				return false;
 			}else{
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 			initPixels = false;
 		}
@@ -323,7 +323,7 @@ public class RendererInfoCardiganPose extends RendererInfoCardigan {
 				return false;
 			}else{
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 			initPixels = false;
 		}
@@ -336,7 +336,7 @@ public class RendererInfoCardiganPose extends RendererInfoCardigan {
 				return false;
 			}else{
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 			initPixels = false;
 		}
@@ -349,7 +349,7 @@ public class RendererInfoCardiganPose extends RendererInfoCardigan {
 				return false;
 			}else{
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 			initPixels = false;
 		}

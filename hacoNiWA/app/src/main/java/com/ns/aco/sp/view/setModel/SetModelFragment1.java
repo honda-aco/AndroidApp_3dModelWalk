@@ -47,11 +47,11 @@ public class SetModelFragment1 extends SetModelFragment{
 //            for (SetModelContract.FileSelectView fileSelectView : _fileSelectList){
 //                UtilityActivity.removeFragmentToActivity(
 //                        getActivity().getSupportFragmentManager(),
-//                        fileSelectView.get_fragment());
+//                        fileSelectView.getFragment());
 //
 //                UtilityActivity.addFragmentToActivity(
 //                        getActivity().getSupportFragmentManager(),
-//                        fileSelectView.get_fragment(),
+//                        fileSelectView.getFragment(),
 //                        _linearLayout.getId());
 //            }
 //        }

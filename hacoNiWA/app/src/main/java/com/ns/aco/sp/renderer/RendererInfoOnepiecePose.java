@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import javax.microedition.khronos.opengles.GL10;
 import javax.microedition.khronos.opengles.GL11;
-import android.content.Context;
+
 import android.graphics.Bitmap;
 
 import com.ns.aco.sp.common.delegate.DelegateIF;
@@ -273,7 +273,7 @@ public class RendererInfoOnepiecePose extends RendererInfoOnepiece {
 		// テクスチャおよびモデルデータを読込む
 		if (init){
 			// プログレスバーの最大値を設定
-			_service.setMaxValueProgressDialog(getDrawBitmapCount());
+			_service.setMaxValue_progressDialog(getDrawBitmapCount());
 			loadRendererModel();
 		}
 		boolean success = createBitmapList(init, pixelWidth, pixelHeight);
@@ -295,7 +295,7 @@ public class RendererInfoOnepiecePose extends RendererInfoOnepiece {
 				return false;
 			}else{
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 		}
 
@@ -307,7 +307,7 @@ public class RendererInfoOnepiecePose extends RendererInfoOnepiece {
 				return false;
 			}else{
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 			initPixels = false;
 		}
@@ -322,7 +322,7 @@ public class RendererInfoOnepiecePose extends RendererInfoOnepiece {
 				return false;
 			}else{
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 			initPixels = false;
 		}
@@ -335,7 +335,7 @@ public class RendererInfoOnepiecePose extends RendererInfoOnepiece {
 				return false;
 			}else{
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 			initPixels = false;
 		}
@@ -348,7 +348,7 @@ public class RendererInfoOnepiecePose extends RendererInfoOnepiece {
 				return false;
 			}else{
 				// プログレスバーの現在値を更新
-				_service.incrementProgressDialog(1);
+				_service.increment_progressDialog(1);
 			}
 			initPixels = false;
 		}

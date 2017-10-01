@@ -100,7 +100,7 @@ abstract public class MenuFragmentBase extends Fragment implements MenuContract.
     }
 
     @Override
-    public Fragment get_fragment() {
+    public Fragment getFragment() {
         return this;
     }
 
