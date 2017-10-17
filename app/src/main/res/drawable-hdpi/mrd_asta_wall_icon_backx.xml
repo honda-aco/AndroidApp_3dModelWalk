@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_pressed="true">
+		<layer-list>
+			<item>
+			  <bitmap android:src="@drawable/mrd_asta_wall_icon_back"
+			          android:gravity="center" />
+			</item>
+			<item>
+			  <bitmap android:src="@drawable/mrd_asta_wall_highlight"
+			          android:gravity="center" />
+			</item>
+		</layer-list>
+	</item>
+	<item android:drawable="@drawable/mrd_asta_wall_icon_back" />
+</selector>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AccentButtonStyle" parent="Theme.AppCompat">
+        <!--ボタンの色-->
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <!--ボタンをプレスしている時、シークバーをプレスしている時の色-->
+        <item name="colorControlHighlight">@color/colorAccentDark</item>
+    </style>
+
+    <!--parent="Theme.AppCompat.Light"にすると文字を黒ベースにできる-->
+    <style name="NormalButtonStyle" parent="Theme.AppCompat">
+        <!--ボタンの色-->
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <!--ボタンをプレスしている時、シークバーをプレスしている時の色-->
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="TextViewStyle" >
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextViewStyleDark" >
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="TextViewStyleAccent" >
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="EditViewStyle" parent="Widget.AppCompat.EditText">
+    </style>
+
+    <style name="TabStyle">
+        <item name="selectableItemBackground">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="tabTextColor">@android:color/white</item>
+    </style>
+
+    <style name="ListViewStyle">
+        <item name="android:background">@android:color/darker_gray</item>
+    </style>
+
+    <style name="CheckBoxStyle" parent="Theme.AppCompat.Light">
+        <!-- 枠線 -->
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <!-- チェック時の色 -->
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+    </style>
+
+</resources>

@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<ScrollView
+        android:id="@+id/scrollLeft"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+		android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/linearLeft"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+    </ScrollView>
+
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnAddObjFile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/value0023"
+			android:theme="@style/NormalButtonStyle"/>
+
+		<Space
+			android:layout_width="20dp"
+			android:layout_height="wrap_content" />
+
+		<Button
+            android:id="@+id/btnSaveObjFile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/value0024"
+			android:theme="@style/NormalButtonStyle"/>
+
+    </LinearLayout>
+
+</LinearLayout>
