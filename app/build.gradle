@@ -1,13 +1,22 @@
 apply plugin: 'com.android.application'
 
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0'
+    }
+}
+
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 27
+    buildToolsVersion '27.0.0'
 
     defaultConfig {
         applicationId "com.ns.aco.sp"
         minSdkVersion 14
-        targetSdkVersion 24
+        targetSdkVersion 27
         versionCode 16
         versionName "2.5"
         multiDexEnabled true
@@ -62,11 +71,21 @@ android {
     }
 }
 
+//apply plugin: 'git-repo'
+apply plugin: 'maven'
+
+repositories {
+    maven { url 'http://honda-aco.github.io/AndroidApp_Library/repository'}
+    google()
+}
+
 dependencies {
-    compile 'com.google.android.gms:play-services:+'
     compile files('libs/jp.maru.mrd-2.0.0.jar')
     compile files('libs/MrdAstaWall-1.1.2.jar')
-    compile project(':common')
-    compile 'com.android.support:design:26.0.0-alpha1'
-    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    // compile project(':common')
+    compile 'com.ns.aco.sp:common:1.0.0'
+    compile 'com.google.android.gms:play-services:10.0.1'
+    compile 'com.android.support:mediarouter-v7:27.0.0'
+    implementation 'com.android.support:appcompat-v7:27.0.0'
+    implementation 'com.android.support:design:27.0.0'
 }
