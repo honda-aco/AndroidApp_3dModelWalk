@@ -34,6 +34,14 @@
         <item name="colorControlHighlight">@color/colorPrimaryDark</item>
     </style>
 
+    <style name="NormalButtonStyleInverted" parent="Theme.AppCompat">
+        <!--ボタンの色-->
+        <item name="colorButtonNormal">@color/colorBackground</item>
+        <!--ボタンをプレスしている時、シークバーをプレスしている時の色-->
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
     <style name="TextViewStyle" >
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textColor">@color/colorPrimary</item>

@@ -6,10 +6,26 @@
     android:background="#FFFFFF"
     android:orientation="vertical" >
 
-    <ImageView
-        android:id="@+id/startImage_Start"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_gravity="center" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/value0048"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:theme="@style/NormalButtonStyleInverted" />
+
+        <ImageView
+            android:id="@+id/startImage_Start"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" />
+    </RelativeLayout>
 
 </LinearLayout>

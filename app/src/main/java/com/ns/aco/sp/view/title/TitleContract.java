@@ -23,6 +23,11 @@ public interface TitleContract{
          * @param bitmapList
          */
         void startTimerTask(Bitmap[] bitmapList);
+
+        /**
+         * プライバシーポリシーへ遷移する
+         */
+        void movePolicyPage();
     }
 
     interface Handler{
@@ -51,5 +56,10 @@ public interface TitleContract{
          * 画面の初期処理終了後のView設定
          */
         void setViewAfterFocuced(Context context, ImageView imageView);
+
+        /**
+         * プライバシーポリシー移動
+         */
+        void movePolicyPage();
     }
 }

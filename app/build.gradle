@@ -17,8 +17,8 @@ android {
         applicationId "com.ns.aco.sp"
         minSdkVersion 14
         targetSdkVersion 27
-        versionCode 16
-        versionName "2.5"
+        versionCode 18
+        versionName "2.7"
         multiDexEnabled true
 
         if (project.hasProperty('banner_ad_unit_id_test')) {
@@ -40,17 +40,6 @@ android {
         if (project.hasProperty('asta_wall_ad_id')) {
             buildConfigField 'String', 'asta_wall_ad_id', project.asta_wall_ad_id
         }
-
-//        ndk {
-//            abiFilters "armeabi-v7a"
-//        }
-
-//        externalNativeBuild {
-//            cmake {
-////                cppFlags "-frtti -fexceptions"
-//                abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64'
-//            }
-//        }
     }
 
     buildTypes {
@@ -58,9 +47,6 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
         }
-    }
-
-    productFlavors {
     }
 
     externalNativeBuild {
@@ -80,12 +66,11 @@ repositories {
 }
 
 dependencies {
-    compile files('libs/jp.maru.mrd-2.0.0.jar')
-    compile files('libs/MrdAstaWall-1.1.2.jar')
-    // compile project(':common')
-    compile 'com.ns.aco.sp:common:1.0.0'
-    compile 'com.google.android.gms:play-services:10.0.1'
-    compile 'com.android.support:mediarouter-v7:27.0.0'
+    implementation files('libs/jp.maru.mrd-2.0.0.jar')
+    implementation files('libs/MrdAstaWall-1.1.2.jar')
+    implementation 'com.ns.aco.sp:common:1.0.0'
+    implementation 'com.google.android.gms:play-services:10.0.1'
+    implementation 'com.android.support:mediarouter-v7:27.0.0'
     implementation 'com.android.support:appcompat-v7:27.0.0'
     implementation 'com.android.support:design:27.0.0'
 }

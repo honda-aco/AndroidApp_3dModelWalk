@@ -48,6 +48,7 @@
     <string name="value0045">＜座標範囲について＞</string>
     <string name="value0046">モデルリスト</string>
     <string name="value0047">自作モデル登録</string>
+    <string name="value0048">プライバシーポリシー</string>
     <string name="service_intent_action">serviceHaconiwaIntent</string>
     <string name="service_intent1">charaNo</string>
     <string name="service_intent2">saveEnergy</string>

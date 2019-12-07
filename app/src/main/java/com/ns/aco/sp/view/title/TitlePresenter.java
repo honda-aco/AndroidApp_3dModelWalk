@@ -68,4 +68,9 @@ public class TitlePresenter implements TitleContract.Presenter {
     public void startActivity(){
         _view.startActivity();
     }
+
+    @Override
+    public void movePolicyPage() {
+        _view.movePolicyPage();
+    }
 }
