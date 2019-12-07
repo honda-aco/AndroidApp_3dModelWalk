@@ -128,6 +128,9 @@ public class ProgressDialog extends DialogFragment implements DialogContract.Pro
 
     @Override
     public void setMax(int value){
+        if (_progressBar == null){
+            return;
+        }
         _maxValue = value;
         updateTextValue();
         _progressBar.setMax(value);
@@ -135,6 +138,9 @@ public class ProgressDialog extends DialogFragment implements DialogContract.Pro
 
     @Override
     public void incrementProgressBy(int value){
+        if (_progressBar == null){
+            return;
+        }
         _progress += value;
         updateTextValue();
         _progressBar.incrementProgressBy(value);
@@ -142,6 +148,9 @@ public class ProgressDialog extends DialogFragment implements DialogContract.Pro
 
     @Override
     public void setProgress(int value){
+        if (_progressBar == null){
+            return;
+        }
         _progress = value;
         updateTextValue();
         _progressBar.setProgress(value);

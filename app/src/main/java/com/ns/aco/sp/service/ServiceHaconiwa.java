@@ -14,6 +14,7 @@ import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
 import android.graphics.Point;
 import android.opengl.GLSurfaceView;
+import android.os.Build;
 import android.os.IBinder;
 import android.app.Notification;
 import android.app.Service;
@@ -185,12 +186,17 @@ public class ServiceHaconiwa extends Service implements ServiceContract.Service{
 //		Global.glViewSizeY = Global.glWindowHeight;
 //		// TODO 仮追記-20140408-大きくして見栄え確認
 
+		int windowManagerType = WindowManager.LayoutParams.TYPE_TOAST;
+
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+			windowManagerType = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+		}
+
 		// Viewのサイズを設定する
 		_layoutParams = new WindowManager.LayoutParams(
 				(int)_glViewWidth,
 				(int)_glViewHeight,
-				WindowManager.LayoutParams.TYPE_TOAST,
-			//				WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
+				windowManagerType,
 				WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
 				// [TODO]クリックイベントを追加する場合はコメントアウトを解除
 				//			WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,

@@ -6,11 +6,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import com.ns.aco.sp.R;
 import com.ns.aco.sp.da.DataAccessContract;
@@ -34,11 +39,20 @@ public class ActivityMenu extends AppCompatActivity{
 	private DialogContract.Progress _progressDialog2;
 	private MenuContract.Presenter_Fragment1 _presenterFragment1;
 	private MenuContract.Presenter_Fragment2 _presenterFragment2;
+	private final int _OVERLAY_PERMISSION_REQ_CODE = 1000;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		_viewFragment1 = new MenuFragment1();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.canDrawOverlays(this)) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        Uri.parse("package:" + getPackageName()));
+                startActivityForResult(intent, _OVERLAY_PERMISSION_REQ_CODE);
+            }
+        }
+
+        _viewFragment1 = new MenuFragment1();
 		_viewFragment2 = new MenuFragment2();
 		_dataAccess = new OperateDataBase(getApplicationContext());
 		_dataAccess.open();
@@ -183,4 +197,14 @@ public class ActivityMenu extends AppCompatActivity{
 		_viewFragment2.setEnabled_stopButton(false);
 		return super.stopService(intent);
 	}
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == _OVERLAY_PERMISSION_REQ_CODE) {
+            if (!Settings.canDrawOverlays(this)) {
+                Log.i("requestCode:" + requestCode, "SYSTEM_ALERT_WINDOW permission not granted...");
+            }
+        }
+    }
 }

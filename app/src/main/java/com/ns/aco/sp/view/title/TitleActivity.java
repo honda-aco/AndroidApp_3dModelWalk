@@ -6,9 +6,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -16,6 +18,7 @@ import java.util.TimerTask;
 public class TitleActivity extends Activity implements TitleContract.View{
 
 	private TitleContract.Presenter _presenter;
+	private Button _policyButton;
 	private ImageView _imageView;
 	private Timer _timer;
 
@@ -27,12 +30,20 @@ public class TitleActivity extends Activity implements TitleContract.View{
 
 		// タイトルバーを非表示にする
 		setContentView(R.layout.activity_title);
-
 		_imageView = (ImageView) findViewById(R.id.startImage_Start);
 		_imageView.setOnClickListener(
 				new OnClickListener() {
 					public void onClick(View clickView) {
 						_presenter.startActivity();
+					}
+				}
+		);
+
+		_policyButton = (Button) findViewById(R.id.btnPolicy);
+		_policyButton.setOnClickListener(
+				new OnClickListener() {
+					public void onClick(View clickView) {
+						_presenter.movePolicyPage();
 					}
 				}
 		);
@@ -84,6 +95,20 @@ public class TitleActivity extends Activity implements TitleContract.View{
 		// 次画面のアクティビティ起動
 		startActivity(intent);
 		finish();
+	}
+
+	@Override
+	public void movePolicyPage(){
+/*		if (_timer != null){
+			_timer.cancel();
+		}*/
+
+		// インテントのインスタンス生成
+		Uri uri = Uri.parse("https://honda-aco.github.io/honda-aco-apps/privacy-policy-hacoNiWA");
+		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+		// ポリシーページを起動
+		startActivity(intent);
+/*		finish();*/
 	}
 
 	@Override
