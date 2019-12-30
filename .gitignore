@@ -44,6 +44,7 @@ captures/
 *.jks
 
 # External native build folder generated in Android Studio 2.2 and later
+app/.cxx/
 app/.externalNativeBuild/cmake/debug/*
 app/.externalNativeBuild/cmake/release/*
 !app/.externalNativeBuild/cmake/debug/obj
