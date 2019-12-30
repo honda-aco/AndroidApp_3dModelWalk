@@ -188,7 +188,7 @@ public class ServiceHaconiwa extends Service implements ServiceContract.Service{
 
 		int windowManagerType = WindowManager.LayoutParams.TYPE_TOAST;
 
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 			windowManagerType = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
 		}
 
