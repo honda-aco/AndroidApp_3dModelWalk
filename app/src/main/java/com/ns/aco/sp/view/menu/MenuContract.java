@@ -1,7 +1,8 @@
 package com.ns.aco.sp.view.menu;
 
 import android.app.FragmentManager;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
+import androidx.core.app.ActivityCompat;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;

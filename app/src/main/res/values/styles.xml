@@ -2,12 +2,12 @@
 
 <resources>
 
-    <!-- Base application theme. -->
+<!--    &lt;!&ndash; Base application theme. &ndash;&gt;-->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
     </style>
 
     <style name="AppTheme.NoActionBar" parent="AppTheme">
@@ -15,16 +15,16 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+<!--    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+<!--    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
 
-    <style name="AccentButtonStyle" parent="Theme.AppCompat">
-        <!--ボタンの色-->
-        <item name="colorButtonNormal">@color/colorAccent</item>
-        <!--ボタンをプレスしている時、シークバーをプレスしている時の色-->
-        <item name="colorControlHighlight">@color/colorAccentDark</item>
-    </style>
+<!--    <style name="AccentButtonStyle" parent="Theme.AppCompat">-->
+<!--        &lt;!&ndash;ボタンの色&ndash;&gt;-->
+<!--        <item name="colorButtonNormal">@color/colorAccent</item>-->
+<!--        &lt;!&ndash;ボタンをプレスしている時、シークバーをプレスしている時の色&ndash;&gt;-->
+<!--        <item name="colorControlHighlight">@color/colorAccentDark</item>-->
+<!--    </style>-->
 
     <!--parent="Theme.AppCompat.Light"にすると文字を黒ベースにできる-->
     <style name="NormalButtonStyle" parent="Theme.AppCompat">
@@ -63,12 +63,12 @@
     <style name="TabStyle">
         <item name="selectableItemBackground">@color/colorPrimary</item>
         <item name="android:textColorPrimary">@android:color/white</item>
-        <item name="tabTextColor">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <style name="ListViewStyle">
-        <item name="android:background">@android:color/darker_gray</item>
-    </style>
+<!--    <style name="ListViewStyle">-->
+<!--        <item name="android:background">@android:color/darker_gray</item>-->
+<!--    </style>-->
 
     <style name="CheckBoxStyle" parent="Theme.AppCompat.Light">
         <!-- 枠線 -->

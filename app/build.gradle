@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     defaultConfig {
         applicationId "com.ns.aco.sp"
-        minSdkVersion 14
-        targetSdkVersion 28
+        minSdkVersion 16
+        targetSdkVersion 29
         versionCode 21
-        versionName "3.0"
+        versionName "4.0"
         multiDexEnabled true
 
         if (project.hasProperty('banner_ad_unit_id_test')) {
@@ -39,12 +39,13 @@ android {
         }
     }
 
-    externalNativeBuild {
-        cmake {
-            // Provides a relative path to your CMake build script.
-            path "CMakeLists.txt"
-        }
-    }
+//    externalNativeBuild {
+//        cmake {
+//            // Provides a relative path to your CMake build script.
+//            path "CMakeLists.txt"
+//        }
+//    }
+    buildToolsVersion '30.0.2'
 }
 
 apply plugin: 'maven'
@@ -56,9 +57,8 @@ repositories {
 dependencies {
     implementation files('libs/jp.maru.mrd-2.0.0.jar')
     implementation files('libs/MrdAstaWall-1.1.2.jar')
-    implementation 'com.ns.aco.sp:common:1.0.0'
-    implementation 'com.google.android.gms:play-services:12.0.1'
-    implementation 'com.android.support:mediarouter-v7:28.0.0'
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.google.android.gms:play-services-ads:20.4.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.ns.aco.sp:common:2.0.0'
 }

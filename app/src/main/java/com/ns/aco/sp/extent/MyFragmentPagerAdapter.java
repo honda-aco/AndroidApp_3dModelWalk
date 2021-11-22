@@ -1,10 +1,11 @@
 package com.ns.aco.sp.extent;
 
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
-public class MyFragmentPagerAdapter extends android.support.v4.app.FragmentPagerAdapter {
+public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
     Fragment[]  _fragmentList;
     String[] _pageTitleList;
