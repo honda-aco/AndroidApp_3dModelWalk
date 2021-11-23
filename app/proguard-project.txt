@@ -10,7 +10,6 @@
 -keep public class * extends android.app.Service
 -keep public class * extends android.content.BroadcastReceiver
 -keep public class * extends android.content.ContentProvider
--keep public class com.android.vending.licensing.ILicensingService
 
 -keepclasseswithmembernames class * {
     native <methods>;
@@ -26,7 +25,5 @@
     public static ** valueOf(java.lang.String);
 }
 
-#-keep libs/jp.maru.mrd-2.0.0.jar
-#-keep libs/MrdAstaWall-1.1.2.jar
 -dontwarn jp.maru.mrd.wall.mediation.**
 -dontwarn com.google.android.gms.**

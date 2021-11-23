@@ -39,12 +39,13 @@ android {
         }
     }
 
-//    externalNativeBuild {
-//        cmake {
-//            // Provides a relative path to your CMake build script.
-//            path "CMakeLists.txt"
-//        }
-//    }
+    externalNativeBuild {
+        cmake {
+            // Provides a relative path to your CMake build script.
+            path "CMakeLists.txt"
+        }
+    }
+
     buildToolsVersion '30.0.2'
 }
 
